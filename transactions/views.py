@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from models import Income, Expense
+from .models import Income, Expense
 
 def index(request):
     return render(request, 'index.html')
