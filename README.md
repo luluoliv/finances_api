@@ -30,7 +30,7 @@ A API possui os seguintes endpoints:
 - **[PUT] https://finances-manager.onrender.com/goals/{id}/**: Atualiza uma meta existente.
 - **[DELETE] https://finances-manager.onrender.com/goals/{id}/**: Exclui uma meta existente.
 
-Acesse a documentação da API em `=https://finances-manager.onrender.com/)=` para obter informações detalhadas sobre como usar cada endpoint.
+Acesse a documentação da API em `https://finances-manager.onrender.com` para obter informações detalhadas sobre como usar cada endpoint.
 
 ## Contribuição
 Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:
