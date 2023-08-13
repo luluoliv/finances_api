@@ -3,13 +3,6 @@ from django.shortcuts import render
 from .models import Income, Expense, Goal
 from .serializers import IncomeSerializer, ExpenseSerializer, GoalSerializer
 
-
-def index(request):
-    incomes = Income.objects.all()
-    expenses = Expense.objects.all()
-    goals = Goal.objects.all()
-    return render(request, 'index.html', {'incomes': incomes, 'expenses': expenses, 'goals': goals})
-
 # Views for Income Model
 class IncomeList(generics.ListCreateAPIView):
     queryset = Income.objects.all()
