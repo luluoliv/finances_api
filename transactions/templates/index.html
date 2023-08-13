@@ -15,24 +15,39 @@
         />
     </head>
     <body>
-        <h1>Welcome to the Financial Manager</h1>
-        <h2>Incomes</h2>
-        <div>
-            {% for income in incomes %}
-            <span>{{ income.description }} - {{ income.amount }}</span>
-            {% endfor %}
-        </div>
-        <h2>Expenses</h2>
-        <div>
-            {% for expense in expenses %}
-            <span>{{ expense.description }} - {{ expense.amount }}</span>
-            {% endfor %}
-        </div>
-        <h2>Goals</h2>
-        <div>
-            {% for goal in goals %}
-            <span>{{ goal.description }} - {{ goal.target_amount }}</span>
-            {% endfor %}
-        </div>
+        <main class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col">
+                    <h1 class="mt-5 display-4">Welcome to the Financial Manager</h1>
+
+                    <h2 class="mt-4">Incomes</h2>
+                    <ul class="list-group">
+                        {% for income in incomes %}
+                        <li class="list-group-item">
+                            {{ income.description }} - {{ income.amount }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <h2 class="mt-4">Expenses</h2>
+                    <ul class="list-group">
+                        {% for expense in expenses %}
+                        <li class="list-group-item">
+                            {{ expense.description }} - {{ expense.amount }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <h2 class="mt-4">Goals</h2>
+                    <ul class="list-group">
+                        {% for goal in goals %}
+                        <li class="list-group-item">
+                            {{ goal.description }} - {{ goal.target_amount }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
