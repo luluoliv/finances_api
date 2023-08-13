@@ -1,56 +1,159 @@
-# Financial Manager API
+# Documentação da API do Finances Manager
 
-Este projeto é uma API de gerenciamento de finanças pessoais. Ele permite que os usuários adicionem, visualizem, atualizem e excluam informações sobre suas receitas, despesas e metas financeiras.
+Bem-vindo à documentação da API do projeto `Aplicativo de Gerenciamento Financeiro`! Esta documentação fornece informações detalhadas sobre os endpoints, como usar a API e exemplos de solicitações e respostas.
 
-## Recursos Principais
+## Base URL
 
-- Gerenciamento de receitas, despesas e metas.
-- APIs RESTful para interagir com os dados.
-- Baseado no framework Django e Django REST framework.
+A base URL da API é `https://finances-manager.onrender.com/`. Todos os endpoints listados abaixo devem ser anexados a essa URL base.
 
-## Uso da API
+## Recursos
 
-A API possui os seguintes endpoints:
+A API oferece os seguintes recursos:
 
-### Rendas
-```bash
-- [GET] https://finances-manager.onrender.com/incomes/: Lista todas as receitas.
-- [POST] https://finances-manager.onrender.com/incomes/: Cria uma nova receita.
-- [GET] https://finances-manager.onrender.com/incomes/{id}/: Retorna detalhes de uma receita específica.
-- [PUT] https://finances-manager.onrender.com/incomes/{id}/: Atualiza uma receita existente.
-- [DELETE] https://finances-manager.onrender.com/incomes/{id}/: Exclui uma receita existente.
-```
+### Receitas
+
+- **[GET] /incomes/**: Lista todas as receitas.
+- **[POST] /incomes/**: Cria uma nova receita.
+- **[GET] /incomes/{id}/**: Retorna detalhes de uma receita específica.
+- **[PUT] /incomes/{id}/**: Atualiza uma receita existente.
+- **[DELETE] /incomes/{id}/**: Exclui uma receita existente.
 
 ### Despesas
-```bash
-- [GET] https://finances-manager.onrender.com/expenses/: Lista todas as despesas.
-- [POST] https://finances-manager.onrender.com/expenses/: Cria uma nova despesa.
-- [GET] https://finances-manager.onrender.com/expenses/{id}/ Retorna detalhes de uma despesa específica.
-- [PUT] https://finances-manager.onrender.com/expenses/{id}/: Atualiza uma despesa existente.
-- [DELETE] https://finances-manager.onrender.com/expenses/{id}/: Exclui uma despesa existente.
-```
+
+- **[GET] /expenses/**: Lista todas as despesas.
+- **[POST] /expenses/**: Cria uma nova despesa.
+- **[GET] /expenses/{id}/**: Retorna detalhes de uma despesa específica.
+- **[PUT] /expenses/{id}/**: Atualiza uma despesa existente.
+- **[DELETE] /expenses/{id}/**: Exclui uma despesa existente.
 
 ### Metas
-```bash
-- [GET] https://finances-manager.onrender.com/goals/: Lista todas as metas.
-- [POST] https://finances-manager.onrender.com/goals/: Cria uma nova meta.
-- [GET] https://finances-manager.onrender.com/goals/{id}/: Retorna detalhes de uma meta específica.
-- [PUT] https://finances-manager.onrender.com/goals/{id}/: Atualiza uma meta existente.
-- [DELETE] https://finances-manager.onrender.com/goals/{id}/: Exclui uma meta existente.
+
+- **[GET] /goals/**: Lista todas as metas.
+- **[POST] /goals/**: Cria uma nova meta.
+- **[GET] /goals/{id}/**: Retorna detalhes de uma meta específica.
+- **[PUT] /goals/{id}/**: Atualiza uma meta existente.
+- **[DELETE] /goals/{id}/**: Exclui uma meta existente.
+
+## Exemplos
+
+Aqui estão alguns exemplos de solicitações e respostas para os endpoints da API:
+
+### Solicitação GET para listar todas as despesas
+
+```GET /api/expenses/```
+Resposta:
+
+```json
+[
+    {
+        "id": 1,
+        "description": "Aluguel",
+        "amount": 1000.0,
+        "date": "2023-08-10"
+    },
+    {
+        "id": 2,
+        "description": "Supermercado",
+        "amount": 200.0,
+        "date": "2023-08-12"
+    }
+]
 ```
 
-Acesse a documentação da API em `https://finances-manager.onrender.com` para obter informações detalhadas sobre como usar cada endpoint.
+Solicitação POST para criar uma nova meta
+POST /api/goals/
 
-## Contribuição
-Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:
 
-Fork o repositório.
- - Crie uma branch para sua feature (git checkout -b minha-feature).
- - Faça suas modificações e adições.
- - Commit suas mudanças (git commit -m 'Adiciona nova feature').
- - Faça o push para a branch (git push origin minha-feature).
- - Crie um Pull Request.
+Claro, vou ajudá-lo a criar uma documentação básica para a API do seu projeto finances_manager. Aqui está um exemplo de como você pode estruturar a documentação:
 
-## Licença
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+markdown
+Copy code
+# Documentação da API do finances_manager
 
+Bem-vindo à documentação da API do projeto `finances_manager`! Esta documentação fornece informações detalhadas sobre os endpoints, como usar a API e exemplos de solicitações e respostas.
+
+## Base URL
+
+A base URL da API é `https://finances-manager.onrender.com/api/`. Todos os endpoints listados abaixo devem ser anexados a essa URL base.
+
+## Autenticação
+
+A autenticação não é necessária para acessar a maioria dos endpoints desta API. No entanto, certos endpoints podem exigir autenticação para fins de segurança.
+
+## Recursos
+
+A API oferece os seguintes recursos:
+
+### Receitas
+
+- **[GET] /incomes/**: Lista todas as receitas.
+- **[POST] /incomes/**: Cria uma nova receita.
+- **[GET] /incomes/{id}/**: Retorna detalhes de uma receita específica.
+- **[PUT] /incomes/{id}/**: Atualiza uma receita existente.
+- **[DELETE] /incomes/{id}/**: Exclui uma receita existente.
+
+### Despesas
+
+- **[GET] /expenses/**: Lista todas as despesas.
+- **[POST] /expenses/**: Cria uma nova despesa.
+- **[GET] /expenses/{id}/**: Retorna detalhes de uma despesa específica.
+- **[PUT] /expenses/{id}/**: Atualiza uma despesa existente.
+- **[DELETE] /expenses/{id}/**: Exclui uma despesa existente.
+
+### Metas
+
+- **[GET] /goals/**: Lista todas as metas.
+- **[POST] /goals/**: Cria uma nova meta.
+- **[GET] /goals/{id}/**: Retorna detalhes de uma meta específica.
+- **[PUT] /goals/{id}/**: Atualiza uma meta existente.
+- **[DELETE] /goals/{id}/**: Exclui uma meta existente.
+
+## Exemplos
+
+Aqui estão alguns exemplos de solicitações e respostas para os endpoints da API:
+
+### Solicitação GET para listar todas as despesas
+
+```GET expenses/```
+
+Resposta:
+
+```json
+[
+    {
+        "id": 1,
+        "description": "Aluguel",
+        "amount": 1000.0,
+        "date": "2023-08-10"
+    },
+    {
+        "id": 2,
+        "description": "Supermercado",
+        "amount": 200.0,
+        "date": "2023-08-12"
+    }
+]
+```
+
+### Solicitação POST para criar uma nova meta
+
+```POST /goals/```
+Corpo da Solicitação:
+
+```json
+{
+    "description": "Viagem dos sonhos",
+    "target_amount": 5000.0
+}
+```
+
+Resposta:
+
+```json
+{
+    "id": 3,
+    "description": "Viagem dos sonhos",
+    "target_amount": 5000.0,
+    "progress": 0.0
+}
+```
