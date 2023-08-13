@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "finances_manager"
+version = "0.1.0"
+description = "Gerenciador de Finanças Pessoais"
+authors = ["Luara"]
+
+[dependencies]
+python = ">=3.6"
+
+[tool.poetry.dependencies]
+django = "^3.2"
+python = ">=3.6"
+psycopg2 = "^2.9.7"
+psycopg2-binary = "^2.9.7"
+dj-database-url = "^2.0.0"
+
