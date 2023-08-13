@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finances API</title>
+    <title>Finances Manager API Documentation</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
 </head>
-<body>
-    <h1>Bem-vindo à Página Inicial da API</h1>
-    <p>Esta é a página inicial da sua API.</p>
+<body class="container mt-5">
+    <h1 class="display-4">Welcome to the Finances Manager API Documentation</h1>
+    <p class="lead">This is the documentation for the Finances Manager API.</p>
+
+    <h2 class="mt-4">Base URL</h2>
+    <p>The base URL of the API is <code>https://finances-manager.onrender.com/</code>. All the endpoints listed below should be appended to this base URL.</p>
+
+    <h2 class="mt-4">Endpoints</h2>
+    <ul>
+        <li><a href="#incomes">/incomes/</a></li>
+        <li><a href="#expenses">/expenses/</a></li>
+        <li><a href="#goals">/goals/</a></li>
+    </ul>
+
+    <h2 class="mt-4" id="incomes">Endpoints for Incomes</h2>
+    <p>
+        <strong>List all incomes and create a new one.</strong>
+        Endpoint: <code>/incomes/</code> (GET/POST)
+    </p>
+    <p>
+        <strong>Retrieve, update, and delete a specific income.</strong>
+        Endpoint: <code>/incomes/{id}/</code> (GET/PUT/DELETE)
+    </p>
+
+    <h2 class="mt-4" id="expenses">Endpoints for Expenses</h2>
+    <p>
+        <strong>List all expenses and create a new one.</strong>
+        Endpoint: <code>/expenses/</code> (GET/POST)
+    </p>
+    <p>
+        <strong>Retrieve, update, and delete a specific expense.</strong>
+        Endpoint: <code>/expenses/{id}/</code> (GET/PUT/DELETE)
+    </p>
+
+    <h2 class="mt-4" id="goals">Endpoints for Goals</h2>
+    <p>
+        <strong>List all goals and create a new one.</strong>
+        Endpoint: <code>/goals/</code> (GET/POST)
+    </p>
+    <p>
+        <strong>Retrieve, update, and delete a specific goal.</strong>
+        Endpoint: <code>/goals/{id}/</code> (GET/PUT/DELETE)
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
 </html>
