@@ -1,17 +1,38 @@
+from rest_framework import generics
 from django.shortcuts import render
-from django.http import JsonResponse
+from .models import Income, Expense, Goal
+from .serializers import IncomeSerializer, ExpenseSerializer, GoalSerializer
 
-from .models import Income, Expense
 
 def index(request):
-    return render(request, 'index.html')
-
-def get_incomes(request):
     incomes = Income.objects.all()
-    data = [{'description': income.description, 'amount': income.amount, 'date': income.date} for income in incomes]
-    return JsonResponse(data, safe=False)
-
-def get_expenses(request):
     expenses = Expense.objects.all()
-    data = [{'description': expense.description, 'amount': expense.amount, 'date': expense.date} for expense in expenses]
-    return JsonResponse(data, safe=False)
+    goals = Goal.objects.all()
+    return render(request, 'index.html', {'incomes': incomes, 'expenses': expenses, 'goals': goals})
+
+# Views for Income Model
+class IncomeList(generics.ListCreateAPIView):
+    queryset = Income.objects.all()
+    serializer_class = IncomeSerializer
+
+class IncomeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Income.objects.all()
+    serializer_class = IncomeSerializer
+
+# Views for Expense Model
+class ExpenseList(generics.ListCreateAPIView):
+    queryset = Expense.objects.all()
+    serializer_class = ExpenseSerializer
+
+class ExpenseDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Expense.objects.all()
+    serializer_class = ExpenseSerializer
+
+# Views for Goal Model
+class GoalList(generics.ListCreateAPIView):
+    queryset = Goal.objects.all()
+    serializer_class = GoalSerializer
+
+class GoalDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Goal.objects.all()
+    serializer_class = GoalSerializer

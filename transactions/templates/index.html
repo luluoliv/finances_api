@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Hello Django on Render!</title>
+        <title>Finances API</title>
 
         <link
             rel="stylesheet"
@@ -15,12 +15,24 @@
         />
     </head>
     <body>
-        <main class="container">
-            <div class="row text-center justify-content-center">
-                <div class="col">
-                    <h1 class="display-4">Hello World!</h1>
-                </div>
-            </div>
-        </main>
+        <h1>Welcome to the Financial Manager</h1>
+        <h2>Incomes</h2>
+        <div>
+            {% for income in incomes %}
+            <span>{{ income.description }} - {{ income.amount }}</span>
+            {% endfor %}
+        </div>
+        <h2>Expenses</h2>
+        <div>
+            {% for expense in expenses %}
+            <span>{{ expense.description }} - {{ expense.amount }}</span>
+            {% endfor %}
+        </div>
+        <h2>Goals</h2>
+        <div>
+            {% for goal in goals %}
+            <span>{{ goal.description }} - {{ goal.target_amount }}</span>
+            {% endfor %}
+        </div>
     </body>
 </html>
