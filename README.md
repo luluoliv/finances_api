@@ -6,33 +6,32 @@ Bem-vindo à documentação da API do projeto `Aplicativo de Gerenciamento Finan
 
 A base URL da API é `https://finances-manager.onrender.com/`. Todos os endpoints listados abaixo devem ser anexados a essa URL base.
 
-## Recursos
-
-A API oferece os seguintes recursos:
+## Endpoints
 
 ### Receitas
 
-- **[GET] /incomes/**: Lista todas as receitas.
-- **[POST] /incomes/**: Cria uma nova receita.
-- **[GET] /incomes/{id}/**: Retorna detalhes de uma receita específica.
-- **[PUT] /incomes/{id}/**: Atualiza uma receita existente.
-- **[DELETE] /incomes/{id}/**: Exclui uma receita existente.
+#### Lista todas as receitas e cria uma nova.
+Endpoint: ```localhost:8000/incomes/``` (GET/POST)
+
+#### Retorna, atualiza e deleta uma receita específica.
+Endpoint: ```localhost:8000/incomes/{id}/``` (GET/PUT/DELETE)
+
 
 ### Despesas
 
-- **[GET] /expenses/**: Lista todas as despesas.
-- **[POST] /expenses/**: Cria uma nova despesa.
-- **[GET] /expenses/{id}/**: Retorna detalhes de uma despesa específica.
-- **[PUT] /expenses/{id}/**: Atualiza uma despesa existente.
-- **[DELETE] /expenses/{id}/**: Exclui uma despesa existente.
+#### Lista todas as despesas e cria uma nova.
+Endpoint: ```localhost:8000/expenses/``` (GET/POST)
+
+#### Retorna, atualiza e deleta uma despesa específica.
+Endpoint: ```localhost:8000/expenses/{id}/``` (GET/PUT/DELETE)
 
 ### Metas
 
-- **[GET] /goals/**: Lista todas as metas.
-- **[POST] /goals/**: Cria uma nova meta.
-- **[GET] /goals/{id}/**: Retorna detalhes de uma meta específica.
-- **[PUT] /goals/{id}/**: Atualiza uma meta existente.
-- **[DELETE] /goals/{id}/**: Exclui uma meta existente.
+#### Lista todas as metas e cria uma nova.
+Endpoint: ```localhost:8000/goals/``` (GET/POST)
+
+#### Retorna, atualiza e deleta uma meta específica.
+Endpoint: ```localhost:8000/goals/{id}/``` (GET/PUT/DELETE)
 
 ## Exemplos
 
@@ -60,5 +59,27 @@ Resposta:
 ]
 ```
 
+### Solicitação POST para criar uma nova meta
+```POST goals/```
+
+```json
+{
+    "description": "Viagem dos sonhos",
+    "target_amount": 5000.0
+}
+```
+
+Resposta:
+```json
+{
+    "id": 3,
+    "description": "Viagem dos sonhos",
+    "target_amount": 5000.0,
+    "progress": 0.0
+}
+```
+
+## Licença
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
 
