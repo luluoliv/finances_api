@@ -14,29 +14,29 @@ A API possui os seguintes endpoints:
 
 ### Rendas
 ```bash
-- **[GET] https://finances-manager.onrender.com/incomes/**: Lista todas as receitas.
-- **[POST] https://finances-manager.onrender.com/incomes/**: Cria uma nova receita.
-- **[GET] https://finances-manager.onrender.com/incomes/{id}/**: Retorna detalhes de uma receita específica.
-- **[PUT] https://finances-manager.onrender.com/incomes/{id}/**: Atualiza uma receita existente.
-- **[DELETE] https://finances-manager.onrender.com/incomes/{id}/**: Exclui uma receita existente.
+- [GET] https://finances-manager.onrender.com/incomes/: Lista todas as receitas.
+- [POST] https://finances-manager.onrender.com/incomes/: Cria uma nova receita.
+- [GET] https://finances-manager.onrender.com/incomes/{id}/: Retorna detalhes de uma receita específica.
+- [PUT] https://finances-manager.onrender.com/incomes/{id}/: Atualiza uma receita existente.
+- [DELETE] https://finances-manager.onrender.com/incomes/{id}/: Exclui uma receita existente.
 ```
 
 ### Despesas
 ```bash
-- **[GET] https://finances-manager.onrender.com/expenses/**: Lista todas as despesas.
-- **[POST] https://finances-manager.onrender.com/expenses/**: Cria uma nova despesa.
-- **[GET] https://finances-manager.onrender.com/expenses/{id}/**: Retorna detalhes de uma despesa específica.
-- **[PUT] https://finances-manager.onrender.com/expenses/{id}/**: Atualiza uma despesa existente.
-- **[DELETE] https://finances-manager.onrender.com/expenses/{id}/**: Exclui uma despesa existente.
+- [GET] https://finances-manager.onrender.com/expenses/: Lista todas as despesas.
+- [POST] https://finances-manager.onrender.com/expenses/: Cria uma nova despesa.
+- [GET] https://finances-manager.onrender.com/expenses/{id}/ Retorna detalhes de uma despesa específica.
+- [PUT] https://finances-manager.onrender.com/expenses/{id}/: Atualiza uma despesa existente.
+- [DELETE] https://finances-manager.onrender.com/expenses/{id}/: Exclui uma despesa existente.
 ```
 
 ### Metas
 ```bash
-- **[GET] https://finances-manager.onrender.com/goals/**: Lista todas as metas.
-- **[POST] https://finances-manager.onrender.com/goals/**: Cria uma nova meta.
-- **[GET] https://finances-manager.onrender.com/goals/{id}/**: Retorna detalhes de uma meta específica.
-- **[PUT] https://finances-manager.onrender.com/goals/{id}/**: Atualiza uma meta existente.
-- **[DELETE] https://finances-manager.onrender.com/goals/{id}/**: Exclui uma meta existente.
+- [GET] https://finances-manager.onrender.com/goals/: Lista todas as metas.
+- [POST] https://finances-manager.onrender.com/goals/: Cria uma nova meta.
+- [GET] https://finances-manager.onrender.com/goals/{id}/: Retorna detalhes de uma meta específica.
+- [PUT] https://finances-manager.onrender.com/goals/{id}/: Atualiza uma meta existente.
+- [DELETE] https://finances-manager.onrender.com/goals/{id}/: Exclui uma meta existente.
 ```
 
 Acesse a documentação da API em `https://finances-manager.onrender.com` para obter informações detalhadas sobre como usar cada endpoint.
