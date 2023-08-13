@@ -2,6 +2,7 @@ from django.urls import path
 from transactions import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('incomes/', views.income_list, name='income-list'),
     path('incomes/<int:pk>/', views.income_detail, name='income-detail'),
     path('expenses/', views.expense_list, name='expense-list'),

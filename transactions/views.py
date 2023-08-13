@@ -4,6 +4,12 @@ from rest_framework import status
 from .models import Income, Expense, Goal
 from .serializers import IncomeSerializer, ExpenseSerializer, GoalSerializer
 
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'index.html')
+
+
 @api_view(['GET', 'POST'])
 def income_list(request):
     if request.method == 'GET':
