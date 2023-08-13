@@ -2,10 +2,10 @@ from django.urls import path
 from transactions import views
 
 urlpatterns = [
-    path('incomes/', views.IncomeList.as_view(), name='income-list'),
-    path('incomes/<int:pk>/', views.IncomeDetail.as_view(), name='income-detail'),
-    path('expenses/', views.ExpenseList.as_view(), name='expense-list'),
-    path('expenses/<int:pk>/', views.ExpenseDetail.as_view(), name='expense-detail'),
-    path('goals/', views.GoalList.as_view(), name='goal-list'),
-    path('goals/<int:pk>/', views.GoalDetail.as_view(), name='goal-detail'),
+    path('incomes/', views.income_list, name='income-list'),
+    path('incomes/<int:pk>/', views.income_detail, name='income-detail'),
+    path('expenses/', views.expense_list, name='expense-list'),
+    path('expenses/<int:pk>/', views.expense_detail, name='expense-detail'),
+    path('goals/', views.goal_list, name='goal-list'),
+    path('goals/<int:pk>/', views.goal_detail, name='goal-detail'),
 ]
