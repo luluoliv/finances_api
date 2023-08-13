@@ -1,1 +1,1 @@
-# finance_backend
+# Manegement Finances App
