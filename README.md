@@ -1,85 +1,83 @@
-# Documentação da API do Finances Manager
+# Finances Manager API Documentation
 
-Bem-vindo à documentação da API do projeto `Aplicativo de Gerenciamento Financeiro`! Esta documentação fornece informações detalhadas sobre os endpoints, como usar a API e exemplos de solicitações e respostas.
+Welcome to the API documentation for the `Financial Management Application` project! This documentation provides detailed information about endpoints, how to use the API, and sample requests and responses.
 
 ## Base URL
 
-A base URL da API é `https://finances-manager.onrender.com/`. Todos os endpoints listados abaixo devem ser anexados a essa URL base.
+The API base URL is `https://finances-manager.onrender.com/`. All endpoints listed below must be appended to this base URL.
 
 ## Endpoints
 
-### Receitas
+### Revenues
 
-#### Lista todas as receitas e cria uma nova.
+#### Lists all recipes and creates a new one.
 Endpoint: ```localhost:8000/incomes/``` (GET/POST)
 
-#### Retorna, atualiza e deleta uma receita específica.
+#### Returns, updates and deletes a specific recipe.
 Endpoint: ```localhost:8000/incomes/{id}/``` (GET/PUT/DELETE)
 
 
-### Despesas
+### Expenses
 
-#### Lista todas as despesas e cria uma nova.
+#### Lists all expenses and creates a new one.
 Endpoint: ```localhost:8000/expenses/``` (GET/POST)
 
-#### Retorna, atualiza e deleta uma despesa específica.
+#### Returns, updates, and deletes a specific expense.
 Endpoint: ```localhost:8000/expenses/{id}/``` (GET/PUT/DELETE)
 
-### Metas
+### Goals
 
-#### Lista todas as metas e cria uma nova.
+#### Lists all goals and creates a new one.
 Endpoint: ```localhost:8000/goals/``` (GET/POST)
 
-#### Retorna, atualiza e deleta uma meta específica.
+#### Returns, updates, and deletes a specific goal.
 Endpoint: ```localhost:8000/goals/{id}/``` (GET/PUT/DELETE)
 
-## Exemplos
+## Examples
 
-Aqui estão alguns exemplos de solicitações e respostas para os endpoints da API:
+Here are some examples of requests and responses for the API endpoints:
 
-### Solicitação GET para listar todas as despesas
+### GET request to list all expenses
 
 ```GET expenses/```
-Resposta:
+Response:
 
 ```json
 [
     {
         "id": 1,
-        "description": "Aluguel",
+        "description": "Rent",
         "amount": 1000.0,
         "date": "2023-08-10"
     },
     {
         "id": 2,
-        "description": "Supermercado",
+        "description": "Supermarket",
         "amount": 200.0,
         "date": "2023-08-12"
     }
 ]
 ```
 
-### Solicitação POST para criar uma nova meta
+### POST request to create a new goal
 ```POST goals/```
 
 ```json
 {
-    "description": "Viagem dos sonhos",
+    "description": "Dream trip",
     "target_amount": 5000.0
 }
 ```
 
-Resposta:
+Response:
 ```json
 {
     "id": 3,
-    "description": "Viagem dos sonhos",
+    "description": "Dream trip",
     "target_amount": 5000.0,
     "progress": 0.0
 }
 ```
 
-## Licença
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
-
-
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
